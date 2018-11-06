@@ -1,0 +1,26 @@
+{{#layouts/restricted/page-wrapper class="skills"}}
+  {{#layouts/content-wrapper title='Required Skills'}}
+        {{#custom-elements/in-page-alert type='info' class='sub-header'}}
+          Click on a skill listed below to see relevant work experience
+        {{/custom-elements/in-page-alert}}
+      <div class='skills-contents'>
+        <h4 class='blue-caps'>Skills required for the position</h4>
+        <hr>
+        <ul>
+          {{#each metadata.skillsTags as |tag|}}
+            <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    <hr>
+
+    <h3 class='current-skill'>{{currentTitle}}</h3>
+      <div class='active-item'>
+      {{#each relevantWorkExperienceItems as |item index|}}
+          {{#custom-elements/animated-accordion title=item.title index=index}}
+            {{component item.content}}
+          {{/custom-elements/animated-accordion}}
+      {{/each}}
+    </div>
+  {{/layouts/content-wrapper}}
+{{/layouts/restricted/page-wrapper}}

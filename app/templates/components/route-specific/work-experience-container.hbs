@@ -1,0 +1,12 @@
+{{#layouts/restricted/page-wrapper class="work-experience"}}
+  	{{#layouts/content-wrapper title='Work Experience'}}
+      {{#custom-elements/in-page-alert type='info' class='sub-header'}}
+  		Items have been tagged with relevant skills that are required for the position
+  		{{/custom-elements/in-page-alert}}
+      {{#each metadata.workExperienceItems as |item index|}}
+        {{#custom-elements/animated-accordion title=item.title index=index}}
+          {{content/work-experience/work-experience-base item=item}}
+        {{/custom-elements/animated-accordion}}
+      {{/each}}
+  	{{/layouts/content-wrapper}}
+{{/layouts/restricted/page-wrapper}}

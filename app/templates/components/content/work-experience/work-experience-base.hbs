@@ -1,0 +1,10 @@
+{{component content}}
+<div class='work-experience-tags'>
+	<hr>
+	<span class='blue-caps'><b>Related skills</b></span>
+	<hr>
+	{{#each item.relatedSkills as |relatedSkillId|}}
+		{{custom-elements/skills-tag relatedSkillId=relatedSkillId}}
+	{{/each}}
+	<div class='clr'></div>
+</div>

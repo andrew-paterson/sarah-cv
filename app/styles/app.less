@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600);
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:800);
+
+@import "_mixins-and-variables/variables-bits-and-pieces";
+@import "_mixins-and-variables/variables-general-site-layout";
+@import "_mixins-and-variables/variables-custom";
+@import "_mixins-and-variables/mixins";
+
+@import "page-layouts/general";
+@import "page-layouts/authenticated";
+@import "page-layouts/public";
+@import "page-layouts/loader";
+
+@import "generic-elements/bits-and-pieces";
+@import "generic-elements/info-popouts";
+@import "generic-elements/pop-up-boxes";
+@import "generic-elements/perfect-scrollbar-overrides";
+@import "generic-elements/box-arrows";
+@import "generic-elements/spinning-cog";
+@import "generic-elements/block-row";
+
+@import "component-specific/custom-elements/form-field-input";
+@import "component-specific/custom-elements/animated-accordion";
+@import "component-specific/custom-elements/confirm-cancel-popout";
+@import "component-specific/custom-elements/skills-tag";
+
+@import "component-specific/layouts/main-nav";
+@import "component-specific/layouts/user-greeting";
+@import "component-specific/layouts/system-messages";
+@import "component-specific/job-full-results/resistance-reports";
+@import "component-specific/user-popout";
+@import "component-specific/svg-specific";
+@import "component-specific/in-page-alerts";
+
+@media(max-width: 979px) {
+
+	div.wrapper {
+		padding-top: 0;
+	}
+	header {
+		position: inherit;
+		height: auto !important;
+	}
+
+	div.login-greeting span.users-name {
+		height: auto;
+		text-align: center;
+		width: 100%;
+	}
+
+
+	.hide-below-979px {
+		display: none;
+	}
+
+	.show-below-979px {
+		display: block;
+	}
+
+	div.main-nav-mobile,
+	div.main-nav-mobile div.nav-sidebar,
+	div.nav-sidebar ul,
+	div.nav-sidebar ul li,
+	div.nav-sidebar ul li a.active {
+		width: 100%;
+	}
+
+	div.main-nav-mobile div.nav-sidebar {
+		position: relative;
+		top: inherit;
+		left: inherit;
+		border-bottom: 1px solid #ccc;
+		overflow: hidden;
+	}
+
+	div.wrapper.interface div#main-content-strip {
+		padding-left: 0;
+	}
+
+	div.nav-sidebar ul li.menu-toggle {
+		display: block;
+	}
+}
+
+@media(min-width: 980px) {
+	.hide-below-979px {
+		display: block;
+	}
+
+	.show-below-979px {
+		display: none;
+	}
+
+	div.nav-sidebar ul li.menu-toggle {
+		display: none;
+	}
+}
+
+a.download-cv {
+	color: #fff;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	background-color: #bbb;
+	font-family: @header-font-family;
+	text-transform: uppercase;
+	font-weight: 800;
+	text-align: center;
+}
+
+div.work-experience-tags {
+	text-align: right;
+}
+
+div.skills div.active-item {
+	margin-left: 40px;
+}
+
+.in-page-alert.sub-header {
+	margin-top: -17px;
+	margin-bottom: 25px;
+}
+
+img.photo {
+	max-width: 242px;	
+	margin-top: 10px;
+}
+@media(min-width: 1160px) {
+	img.photo {
+		float: right;
+		margin-left: 50px;
+	}
+	div.wrapper.interface.intro.text-column .body-content {
+		max-width: 960px;
+	}
+
+	div.wrapper.interface.intro.text-column .body-content .accordions {
+		max-width: 660px;
+	}
+}
+
+.in-page-alert.no-margin {
+	margin-bottom: 10px;
+}
+
+div.body-content .bold {
+	font-weight: 600;
+}
+div.body-content .sub-text,
+div.skills-contents ul li {
+	color: #777;
+	font-family: 'Times New Roman', serif;
+	font-style: italic;
+}
+
+div.skills-contents ul li a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 400;
+}
+
+div.skills-contents ul li a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.skills-tag {
+	position: relative;
+	max-width: 500px;
+	float: right;
+	clear: both;
+	padding-right: 20px;
+}
+
+.skills-tag div.svg {
+	position: absolute;
+	right: 0;
+	width: 13px;
+	margin: 6px 0 0 3px;
+	fill: #999;
+}
+
+div.skills-tag a {
+	font-family: 'Times New Roman', serif;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: none;
+	color: #999;
+}
+
+div.skills-tag a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.skills-tag:hover div.svg {
+	fill: #000;
+}
+
+table.personal-info {
+	width: 100%;
+	border-width: 0;
+}
+
+
+table.personal-info td.left {
+	width: 150px;
+}
+
+table.personal-info td {
+	border-width: 0;
+	border-bottom: 1px solid #ddd;
+}
+/*zzz-
+References
+-----------------------
+Contact details for refs.
+Capacity in which you worked for refs.
+
+Personal
+-----------------------
+Address 'Gardens'
+Photo
+Full name
+ID number
+
+Work experience
+-----------------------
+Fierce sheep section is unfinished.
+
+
+Icons
+Degree hat
+Star
+User
+[Skills]
+*/

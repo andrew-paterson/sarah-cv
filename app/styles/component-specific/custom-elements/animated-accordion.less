@@ -1,0 +1,72 @@
+div.accordion-item {
+	//border: 1px solid #eee;
+	//margin-bottom: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+div.accordion-item div.dash {
+	display: none;
+}
+
+div.accordion-item.open div.dash {
+	display: block;
+}
+
+div.accordion-item div.plus {
+	display: block;
+}
+
+div.accordion-item.open div.plus {
+	display: none;
+}
+
+div.accordion-item:last-child {
+	margin-bottom: 0;
+}
+
+div.accordion-item div.accordion-item-header {
+	padding: 15px 0 13px;
+	cursor: pointer;
+	border-bottom: 1px solid #ccc;
+}
+
+div.accordion-item div.accordion-item-header div.svg {
+ 	width: 15px;
+ 	float: left;
+ 	margin: 2px 7px 0 0;
+ 	fill: #777;
+}
+
+div.accordion-item div.accordion-item-header h4 {
+	margin-bottom: 0;
+	color: #999;
+	font-size: 1.4em/@body-content-text-font-size;
+	text-transform: none;
+	font-family: @header-font-family;
+	text-transform: uppercase;
+
+}
+
+div.accordion-item div.accordion-item-header:hover h4 {
+	color: #000;
+}
+
+div.accordion-item.open div.accordion-item-content {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	//margin-bottom: 40px;
+}
+
+div.accordion-item div.accordion-item-content {
+	overflow: hidden;
+	display: none;
+}
+
+div.accordion-item ul {
+	margin-top: 0;
+}
+
+div.accordion-item div.accordion-item-content-inner {
+	padding: 15px 15px 10px 40px;
+}
